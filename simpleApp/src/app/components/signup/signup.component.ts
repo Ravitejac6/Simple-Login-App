@@ -141,9 +141,7 @@ export class SignupComponent implements OnInit {
 
   getDatafromAPI(){
     this.dataService.getData().subscribe((response)=>{
-       // console.log("Response from API",response);
         response.forEach(value => this.users.push(value));
-
       }, ((error) =>{
         console.log("error is", error)
       } )

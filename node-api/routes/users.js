@@ -6,6 +6,8 @@ const bcrypt = require('bcrypt');   //Encrypt the password.
 
 const User = require('../models/user');
 
+
+// To get all the users from the database.
 router.get('/getData',(req,res) =>{
     console.log('get Request in Nodejs');
     // User.find().then(res => console.log(res));
@@ -14,6 +16,8 @@ router.get('/getData',(req,res) =>{
 
 });
 
+
+//  creating a new user and checking the existence of user.
 router.post('/user',async (req,res) => {
     try{
         let hashedPassword = await bcrypt.hash(req.body.password, 10);
@@ -50,6 +54,8 @@ router.post('/user',async (req,res) => {
     }
 });
 
+
+// checking the user login details
 router.post('/login',(req,res) => {
     let user_email = req.body.email;
     let user_password = req.body.password;
