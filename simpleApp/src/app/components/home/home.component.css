@@ -1,0 +1,44 @@
+.button-area {
+  margin: 50px 0px 50px 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-1 {
+  margin-right: 15px;
+}
+
+.home-btn {
+  margin-left: 85%;
+}
+
+.mat-icon {
+  transform: scale(0.7);
+}
+
+.card-area {
+  width: 500px;
+  justify-content: center;
+  text-align: center;
+  margin: 100px 500px 0 500px;
+}
+
+.bg {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://d39l2hkdp2esp1.cloudfront.net/img/photo/109975/109975_00_2x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  height: 700px;
+  width: 100%;
+}
+
+.container {
+  width: 100%;
+  margin-top: 10%;
+}
+h1 {
+  text-align: center;
+  color: whitesmoke;
+  border: 1px solid black;
+}

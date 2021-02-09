@@ -1,0 +1,15 @@
+<html>
+  <body class="bg">
+    <mat-toolbar color="primary">
+      <span>Simple WebApp</span>
+      <a mat-button class="home-btn" routerLink="/" routerLinkActive="active"><mat-icon class="home-icon"><span>home</span></mat-icon>Home</a>
+    </mat-toolbar>
+      <div class="container">
+        <h1>Welcome to the Home Page</h1>
+        <div class="button-area">
+          <button class = "button-1" mat-raised-button color="primary" (click)="goToSignUp()"><mat-icon><span>input</span></mat-icon>Sign Up</button>
+          <button class="button-2" mat-raised-button color="warn" (click)="goToLogin()"><mat-icon><span>keyboard_arrow_right</span></mat-icon>Login</button>
+        </div>
+      </div>
+  </body>
+</html>

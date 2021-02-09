@@ -1,0 +1,35 @@
+.half-width {
+  width: 35%;
+  margin: 0 30% 10px 20%;
+}
+
+.container {
+  width: 100%;
+}
+
+.title {
+  text-align: center;
+}
+.submit-btn {
+  display: flex;
+  justify-items: center;
+  margin: 0 30% 0 30%;
+}
+.form-container {
+  justify-content: center;
+  margin-left: 12%;
+  margin-top: 5%;
+}
+
+.home-btn {
+  margin-left: 85%;
+}
+
+.card-area {
+  margin-right: 150px;
+  margin-left: 100px;
+}
+
+.mat-icon {
+  transform: scale(0.7);
+}

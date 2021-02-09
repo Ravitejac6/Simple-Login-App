@@ -1,0 +1,61 @@
+<div class="container">
+  <mat-toolbar color="primary">
+    <span>Simple WebApp</span>
+    <a mat-button class="home-btn" routerLink="/" routerLinkActive="active"><span><mat-icon class="home-icon">home</mat-icon></span>Home</a>
+    </mat-toolbar>
+  <div class="form-container" fxLayout="row" fxLayoutGap="10px"> 
+    <div fxFlex> 
+      <!-- SignUp form using the reactiveForms Validators -->
+      <mat-card class="card-area">
+        <mat-card-title>
+          Registration Form
+        </mat-card-title>
+        <mat-card-content>
+        <form novalidate [formGroup]="signUpForm" #fform="ngForm" (ngSubmit)="onSubmit()">
+          <mat-form-field class="half-width">
+            <mat-label>First Name</mat-label>
+            <input matInput formControlName="firstName" placeholder="First Name" type="text" required/>
+            <mat-error *ngIf="signUpErrors.firstName">
+              {{ signUpErrors.firstName }}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="half-width">
+            <mat-label>Middle Name</mat-label>
+            <input matInput formControlName="middleName" placeholder="Middle Name" type="text" required/>
+            <mat-error *ngIf="signUpErrors.middleName">
+              {{ signUpErrors.middleName }}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="half-width">
+            <mat-label>Last Name</mat-label>
+            <input matInput formControlName="lastName" placeholder="Last Name" type="text" required/>
+            <mat-error *ngIf="signUpErrors.lastName">
+              {{ signUpErrors.lastName }}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="half-width">
+            <input matInput formControlName="phonenum" placeholder="Phone Number" type="tel" pattern="[0-9]*" required/>
+            <mat-error *ngIf="signUpErrors.phonenum">
+              {{ signUpErrors.phonenum }}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="half-width">
+            <input matInput formControlName="email" placeholder="Email" type="email" email required/>
+            <mat-error *ngIf="signUpErrors.email">
+              {{ signUpErrors.email }}
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field class="half-width">
+            <input matInput formControlName="password" placeholder="Password" type="password" required/>
+            <mat-error *ngIf="signUpErrors.password">
+              {{ signUpErrors.password }}
+            </mat-error>
+          </mat-form-field>
+          <button type="submit" mat-flat-button class="primary submit-btn" [disabled]="signUpForm.invalid">Submit</button>
+      </form>
+    </mat-card-content>
+      </mat-card>
+    </div>  
+</div>
+
+</div>
